@@ -69,12 +69,17 @@ var CountUp = function CountUp() {
     onClick: function onClick() {
       return setCount(count + 1);
     }
-  }, "+"), /*#__PURE__*/_react["default"].createElement("button", {
+  }, "+"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("button", {
     type: "button",
     onClick: function onClick() {
       return setCount(count - 1);
     }
-  }, "-"), /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()));
+  }, "-"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("button", {
+    type: "button",
+    onClick: function onClick() {
+      return setCount(0);
+    }
+  }, "\u30EA\u30BB\u30C3\u30C8"), /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()));
 };
 
 var _default = CountUp;
