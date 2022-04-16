@@ -7,6 +7,7 @@ const CountUp = (): JSX.Element => { // 返り値の型を指定しました。
     <>
       <h1>{count}</h1>
       <button type="button" onClick={() => setCount(count + 1)}>+</button>
+      <button type="button" onClick={() => setCount(count - 1)}>-</button>
       <p>{new Date().toTimeString()}</p>
     </>
   );

@@ -69,7 +69,12 @@ var CountUp = function CountUp() {
     onClick: function onClick() {
       return setCount(count + 1);
     }
-  }, "+"), /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()));
+  }, "+"), /*#__PURE__*/_react["default"].createElement("button", {
+    type: "button",
+    onClick: function onClick() {
+      return setCount(count - 1);
+    }
+  }, "-"), /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()));
 };
 
 var _default = CountUp;
