@@ -8,6 +8,5 @@ var _CountUp = _interopRequireDefault(require("./CountUp"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// import { hydrateRoot } from 'react-dom/cjs/react-dom.production.min';
 // idがappの部分をhydrateで描画する
-(0, _reactDom.hydrate)( /*#__PURE__*/_react["default"].createElement(_CountUp["default"], null), document.querySelector('#app'));
+(0, _reactDom.hydrate)( /*#__PURE__*/_react["default"].createElement(_CountUp["default"], null), document.querySelector("#app"));
