@@ -10,9 +10,7 @@ const ssr = (): string => (`
       <meta charset="utf-8"/>
     </head>
     <body>
-      <div id="app">
-        ${renderToString(<CountUp />)}
-      </div>
+      <div id="app">${renderToString(<CountUp />)}</div>
       <script src="./client.js"></script>
     </body>
   </html>
