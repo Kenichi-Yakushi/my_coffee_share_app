@@ -8,11 +8,17 @@ import {
   createStyles,
   Theme
 } from '@material-ui/core/styles';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     marginBlocks: {
       margin: theme.spacing(1)
+    },
+    iconVerticalAlign: {
+      display: `inline-flex`,
+      verticalAlign: `middle`
     }
   })
 );
@@ -34,7 +40,12 @@ const CountUp = (): JSX.Element => {
         <Grid container className={classes.marginBlocks}>
           <Button type="button" variant="contained" onClick={() => setCount(0)}>リセット</Button>
         </Grid>
-      <div><p>{new Date().toTimeString()}</p></div>
+      <div>
+        <p className={classes.iconVerticalAlign}>
+          <AccessTimeIcon className={classes.iconVerticalAlign}/>
+          {new Date().toTimeString()}
+        </p>
+      </div>
       </Grid>
     </>
   );

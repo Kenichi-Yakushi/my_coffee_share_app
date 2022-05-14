@@ -45,6 +45,10 @@ var _core = require("@material-ui/core");
 
 var _styles = require("@material-ui/core/styles");
 
+var _AccessTime = _interopRequireDefault(require("@material-ui/icons/AccessTime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -65,6 +69,10 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
   return (0, _styles.createStyles)({
     marginBlocks: {
       margin: theme.spacing(1)
+    },
+    iconVerticalAlign: {
+      display: "inline-flex",
+      verticalAlign: "middle"
     }
   });
 });
@@ -108,7 +116,11 @@ var CountUp = function CountUp() {
     onClick: function onClick() {
       return setCount(0);
     }
-  }, "\u30EA\u30BB\u30C3\u30C8")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()))));
+  }, "\u30EA\u30BB\u30C3\u30C8")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", {
+    className: classes.iconVerticalAlign
+  }, /*#__PURE__*/_react["default"].createElement(_AccessTime["default"], {
+    className: classes.iconVerticalAlign
+  }), new Date().toTimeString()))));
 };
 
 var _default = CountUp;
