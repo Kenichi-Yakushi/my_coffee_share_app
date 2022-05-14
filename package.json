@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node -r esm index.js",
     "babel": "babel src -x '.ts,.tsx' -d views",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --mode development"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
