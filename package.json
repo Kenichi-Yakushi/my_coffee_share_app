@@ -30,6 +30,8 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "esm": "^3.2.25",
     "express": "^4.17.3",
     "react": "^17.0.0",

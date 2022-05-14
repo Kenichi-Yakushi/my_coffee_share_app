@@ -41,6 +41,10 @@ require("core-js/modules/es.array.is-array.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _core = require("@material-ui/core");
+
+var _styles = require("@material-ui/core/styles");
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -57,29 +61,54 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var useStyles = (0, _styles.makeStyles)(function (theme) {
+  return (0, _styles.createStyles)({
+    marginBlocks: {
+      margin: theme.spacing(1)
+    }
+  });
+});
+
 var CountUp = function CountUp() {
-  // 返り値の型を指定しました。
+  var classes = useStyles();
+
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       count = _useState2[0],
       setCount = _useState2[1];
 
-  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("h1", null, count), /*#__PURE__*/_react["default"].createElement("button", {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_core.Grid, {
+    container: true
+  }, /*#__PURE__*/_react["default"].createElement("h1", null, count), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
+    container: true,
+    className: classes.marginBlocks
+  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
     type: "button",
+    variant: "contained",
+    color: "primary",
     onClick: function onClick() {
       return setCount(count + 1);
     }
-  }, "+"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("button", {
+  }, "+"), /*#__PURE__*/_react["default"].createElement("br", null)), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
+    container: true,
+    className: classes.marginBlocks
+  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
     type: "button",
+    variant: "contained",
+    color: "primary",
     onClick: function onClick() {
       return setCount(count - 1);
     }
-  }, "-"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("button", {
+  }, "-"), /*#__PURE__*/_react["default"].createElement("br", null)), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
+    container: true,
+    className: classes.marginBlocks
+  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
     type: "button",
+    variant: "contained",
     onClick: function onClick() {
       return setCount(0);
     }
-  }, "\u30EA\u30BB\u30C3\u30C8"), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString())));
+  }, "\u30EA\u30BB\u30C3\u30C8")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", null, new Date().toTimeString()))));
 };
 
 var _default = CountUp;
