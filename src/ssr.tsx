@@ -1,5 +1,5 @@
-import React from "react";
-import { renderToString } from "react-dom/server";
+//import React from "react";
+import * as ReactDOMServer from "react-dom/server";
 import CountUp from "./CountUp";
 
 // 返り値の型を指定しました。
@@ -10,7 +10,7 @@ const ssr = (): string => `
       <meta charset="utf-8"/>
     </head>
     <body>
-      <div id="app">${renderToString(<CountUp />)}</div>
+      <div id="app">${ReactDOMServer.renderToString(<CountUp />)}</div>
       <script src="./client.js"></script>
     </body>
   </html>

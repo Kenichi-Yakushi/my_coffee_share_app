@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
 require("core-js/modules/es.symbol.js");
 
 require("core-js/modules/es.symbol.description.js");
@@ -24,11 +22,7 @@ require("core-js/modules/es.array.from.js");
 
 require("core-js/modules/es.regexp.exec.js");
 
-require("core-js/modules/es.weak-map.js");
-
 require("core-js/modules/es.object.define-property.js");
-
-require("core-js/modules/es.object.get-own-property-descriptor.js");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -39,19 +33,13 @@ require("core-js/modules/es.date.to-string.js");
 
 require("core-js/modules/es.array.is-array.js");
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = require("react");
 
-var _core = require("@material-ui/core");
+var _material = require("@mui/material");
 
-var _styles = require("@material-ui/core/styles");
-
-var _AccessTime = _interopRequireDefault(require("@material-ui/icons/AccessTime"));
+var _AccessTime = _interopRequireDefault(require("@mui/icons-material/AccessTime"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -65,62 +53,41 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useStyles = (0, _styles.makeStyles)(function (theme) {
-  return (0, _styles.createStyles)({
-    marginBlocks: {
-      margin: theme.spacing(1)
-    },
-    iconVerticalAlign: {
-      display: "inline-flex",
-      verticalAlign: "middle"
-    }
-  });
-});
-
 var CountUp = function CountUp() {
-  var classes = useStyles();
-
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       count = _useState2[0],
       setCount = _useState2[1];
 
-  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_core.Grid, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_material.Grid, {
     container: true
-  }, /*#__PURE__*/_react["default"].createElement("h1", null, count), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
-    container: true,
-    className: classes.marginBlocks
-  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
+  }, /*#__PURE__*/React.createElement("h1", null, count), /*#__PURE__*/React.createElement(_material.Grid, {
+    container: true
+  }, /*#__PURE__*/React.createElement(_material.Button, {
     type: "button",
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setCount(count + 1);
     }
-  }, "+"), /*#__PURE__*/_react["default"].createElement("br", null)), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
-    container: true,
-    className: classes.marginBlocks
-  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
+  }, "+"), /*#__PURE__*/React.createElement("br", null)), /*#__PURE__*/React.createElement(_material.Grid, {
+    container: true
+  }, /*#__PURE__*/React.createElement(_material.Button, {
     type: "button",
     variant: "contained",
     color: "primary",
     onClick: function onClick() {
       return setCount(count - 1);
     }
-  }, "-"), /*#__PURE__*/_react["default"].createElement("br", null)), /*#__PURE__*/_react["default"].createElement(_core.Grid, {
-    container: true,
-    className: classes.marginBlocks
-  }, /*#__PURE__*/_react["default"].createElement(_core.Button, {
+  }, "-"), /*#__PURE__*/React.createElement("br", null)), /*#__PURE__*/React.createElement(_material.Grid, {
+    container: true
+  }, /*#__PURE__*/React.createElement(_material.Button, {
     type: "button",
     variant: "contained",
     onClick: function onClick() {
       return setCount(0);
     }
-  }, "\u30EA\u30BB\u30C3\u30C8")), /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("p", {
-    className: classes.iconVerticalAlign
-  }, /*#__PURE__*/_react["default"].createElement(_AccessTime["default"], {
-    className: classes.iconVerticalAlign
-  }), new Date().toTimeString()))));
+  }, "\u30EA\u30BB\u30C3\u30C8")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement(_AccessTime["default"], null), new Date().toTimeString()))));
 };
 
 var _default = CountUp;
