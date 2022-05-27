@@ -1,5 +1,5 @@
-# sample_countupdown_typescript_react_express
-## 環境構築用 React17.0.0 TypeScript Express Babel Webpack
+# my_coffee_share_app
+## 環境構築用 React18.0.9 TypeScript4.6.4 Express4.17.2 Babel Webpack MySQL8.0
 
 ### webpack モジュールバンドラー コマンド
 ``` yarn build ```
@@ -9,3 +9,6 @@
 
 ### node.js サーバー起動 コマンド
 ``` yarn start ```
+
+## README - 環境構築手順 -
+``` docker-compose up ```
