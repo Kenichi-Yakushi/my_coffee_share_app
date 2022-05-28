@@ -2,7 +2,7 @@ module.exports = [
   {
     name: "default", // 標準で読み込まれる設定
     type: "mysql",
-    host: "localhost",
+    host: "ssr-sample-db",
     port: 3306,
     username: "nodeexpressor",
     password: "secret",
