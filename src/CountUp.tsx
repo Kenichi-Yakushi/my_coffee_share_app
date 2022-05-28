@@ -10,37 +10,18 @@ const CountUp = (): JSX.Element | null => {
       <Grid container>
         <h1>{count}</h1>
         <Grid container>
-          <Button
-            type="button"
-            variant="contained"
-            color="primary"
-            onClick={() => setCount(count + 1)}
-          >
-            +
-          </Button>
+          <Button type="button" variant="contained" color="primary" onClick={() => setCount(count + 1)}>+</Button>
           <br />
         </Grid>
         <Grid container>
-          <Button
-            type="button"
-            variant="contained"
-            color="primary"
-            onClick={() => setCount(count - 1)}
-          >
-            -
-          </Button>
+          <Button type="button" variant="contained" color="primary" onClick={() => setCount(count - 1)}>-</Button>
           <br />
         </Grid>
         <Grid container>
-          <Button type="button" variant="contained" onClick={() => setCount(0)}>
-            リセット
-          </Button>
+          <Button type="button" variant="contained" onClick={() => setCount(0)}>リセット</Button>
         </Grid>
         <div>
-          <p>
-            <AccessTimeIcon />
-            {new Date().toTimeString()}
-          </p>
+          <p><AccessTimeIcon />{new Date().toTimeString()}</p>
         </div>
       </Grid>
     </>
