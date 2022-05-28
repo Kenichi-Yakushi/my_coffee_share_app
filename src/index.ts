@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 import { AppDataSource } from "./data-source";
 import { Routes } from "./routes";
 import { User } from "./entity/User";
-// import ssr from "./ssr";
+import ssr from "./ssr";
 
 AppDataSource.initialize()
   .then(async () => {
@@ -102,5 +102,12 @@ AppDataSource.initialize()
     console.log(
       "Express server has started on port 3000. Open http://localhost:3000/users to see results"
     );
+
+    app.use(express.static("assets"));
+
+    app.get("/", (_, res) => {
+      const response = ssr();
+      res.send(response);
+    });
   })
   .catch((error) => console.log(error));
