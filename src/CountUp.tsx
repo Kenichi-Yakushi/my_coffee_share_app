@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState } from "react";
 import { Grid, Button } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -12,13 +13,22 @@ const CountUp = (): JSX.Element | null => {
         <Grid container>
           <Button type="button" variant="contained" color="primary" onClick={() => setCount(count + 1)}>+</Button>
           <br />
+          <br />
         </Grid>
         <Grid container>
           <Button type="button" variant="contained" color="primary" onClick={() => setCount(count - 1)}>-</Button>
           <br />
+          <br />
+        </Grid>
+        <Grid container>
+          <Button type="button" variant="contained" color="primary" onClick={() => setCount(count * 2)}>x2</Button>
+          <br />
+          <br />
         </Grid>
         <Grid container>
           <Button type="button" variant="contained" onClick={() => setCount(0)}>リセット</Button>
+          <br />
+          <br />
         </Grid>
         <div>
           <p><AccessTimeIcon />{new Date().toTimeString()}</p>

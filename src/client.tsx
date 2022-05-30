@@ -1,9 +1,10 @@
-// import React from "react";
-import { hydrateRoot } from "react-dom/client";
+import * as React from "react";
+import { createRoot } from "react-dom/client";
 import CountUp from "./CountUp";
 
 const container = document.getElementById("app");
-const root = hydrateRoot(container, <CountUp />);
+const root = createRoot(container);
+root.render(<CountUp />);
 
 // idがappの部分をhydrateで描画する
 // root.render(<CountUp />);
