@@ -35,7 +35,7 @@ services:
     # 起動時のカレントフォルダ
     working_dir: /app
     # 起動後に実行するコマンド
-    command: sh -c "yarn babel && yarn start"
+    command: sh -c "yarn build && yarn babel && yarn start"
     tty: true
     # dbを読む
     depends_on:

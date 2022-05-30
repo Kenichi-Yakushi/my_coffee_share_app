@@ -27,6 +27,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
+var React = _interopRequireWildcard(require("react"));
+
 var ReactDOMServer = _interopRequireWildcard(require("react-dom/server"));
 
 var _CountUp = _interopRequireDefault(require("./CountUp"));
@@ -37,7 +39,6 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-// import React from "react";
 // 返り値の型を指定しました。
 var ssr = function ssr() {
   return "\n  <html>\n    <head>\n      <title>CountUp</title>\n      <meta charset=\"utf-8\"/>\n    </head>\n    <body>\n      <div id=\"app\">".concat(ReactDOMServer.renderToString( /*#__PURE__*/React.createElement(_CountUp["default"], null)), "</div>\n      <script src=\"./client.js\"></script>\n    </body>\n  </html>\n");
