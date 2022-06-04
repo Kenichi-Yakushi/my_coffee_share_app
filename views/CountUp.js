@@ -63,6 +63,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+// import CoffeeIndex from "./ui/CoffeeIndex/index";
 var CountUp = function CountUp() {
   var _useState = (0, React.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
