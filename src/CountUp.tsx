@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Grid, Button } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
+// import CoffeeIndex from "./ui/CoffeeIndex/index";
+
 const CountUp = (): JSX.Element | null => {
   const [count, setCount] = useState(0);
 
@@ -33,6 +35,8 @@ const CountUp = (): JSX.Element | null => {
         <div>
           <p><AccessTimeIcon />{new Date().toTimeString()}</p>
         </div>
+
+        {/* <CoffeeIndex /> */}
       </Grid>
     </>
   );
